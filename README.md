@@ -1,7 +1,7 @@
 # PipeNDT
 Velocity-Normalized Multi-Channel State-Space Learning for Drift-Robust Joint Segmentation and Defect Classification in Long-Range Eddy-Current Pipe Inspection
 
-# Experiment Plan — SST-SSM for ECT Pipe Inspection
+## Experiment Plan — SST-SSM for ECT Pipe Inspection
 
 ## Claims
 
