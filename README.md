@@ -1,11 +1,11 @@
-# PI-SST-SSM 
+# PISSM 
 
 Velocity-Normalized Multi-Channel State-Space Learning for Drift-Robust Joint Segmentation and Defect Classification in Long-Range Eddy-Current Pipe Inspection
 
 ![methodology](/assets/PipeNDT_v1.png)
 
 ## Contributions:
-- First velocity-normalized multi-channel selective-SSM for long-range NDT.
+- First physics-informed, velocity-normalized multi-channel selective-SSM for long-range NDT.
 - Learned low-rank common-mode baseline as the drift-robust, label-free substitute for physics.
 - Spatial×spectral×detector fusion justified by measured complementarity/contrast.
 - Genuine linear-complexity long-range inference where prior work used quadratic Transformers or fabricated state-space models.
@@ -16,7 +16,7 @@ Velocity-Normalized Multi-Channel State-Space Learning for Drift-Robust Joint Se
 
 | ID | Claim | Hypothesis | Primary metric | Pass bar |
 |----|-------|------------|----------------|----------|
-| **C1** | SST-SSM jointly segments + classifies better than the existing baselines end-to-end | coupling + long-range SSM reduces error propagation | Propagated Precision (PP) | PP ≥ best baseline + 0.03 |
+| **C1** | PISSM jointly segments + classifies better than the existing baselines end-to-end | coupling + long-range SSM reduces error propagation | Propagated Precision (PP) | PP ≥ best baseline + 0.03 |
 | **C2** | Low-rank common-mode removal improves **drift/OOD** robustness | drift is common-mode; removing it yields drift-invariant signal | ΔF1 = F1_ID − F1_OOD (lower better) | Δ smaller than "w/o common-mode" by ≥0.03 |
 | **C3** | Dual-frequency fusion beats single-frequency | 32/100 Hz are complementary (corr 0.4–0.77) | weighted F1 | F1w(both) > F1w(best single) |
 | **C4** | Selective SSM gives linear-complexity long-range modeling vs Transformer | O(L) vs O(L²) | wall-clock + peak mem vs seq len | linear scaling to ≥100k; < Transformer mem |
